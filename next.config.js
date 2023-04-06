@@ -1,6 +1,30 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
+const { version } = require('./package.json');
+const PRODUCTION = process.env.NODE_ENV === 'production';
 
-module.exports = nextConfig
+const nextConfig = {
+	reactStrictMode: true,
+	swcMinify: true,
+	compiler: {
+		styledComponents: true,
+		removeConsole: PRODUCTION ? { exclude: ['error'] } : false,
+	},
+	eslint: {
+		dirs: ['pages', 'utils', 'components'],
+	},
+	i18n: {
+		locales: ['fa'],
+		defaultLocale: 'fa',
+	},
+	images: {
+		formats: ['image/avif', 'image/webp'],
+		minimumCacheTTL: 60,
+		domains: [''],
+	},
+	distDir: 'build',
+	publicRuntimeConfig: {
+		version,
+	},
+};
+
+module.exports = nextConfig;
