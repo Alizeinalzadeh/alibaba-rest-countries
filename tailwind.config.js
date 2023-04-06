@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 module.exports = {
 	darkMode: 'class',
 	content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
@@ -18,7 +20,7 @@ module.exports = {
 				},
 			},
 			fontFamily: {
-				sans: ['var(--font-nunito)', ...fontFamily.nunito],
+				nunito: ['var(--font-nunito)', ...fontFamily.sans],
 			},
 		},
 	},
