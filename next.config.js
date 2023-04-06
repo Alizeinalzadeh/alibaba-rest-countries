@@ -19,7 +19,7 @@ const nextConfig = {
 	images: {
 		formats: ['image/avif', 'image/webp'],
 		minimumCacheTTL: 60,
-		domains: [''],
+		domains: ['flagcdn.com'],
 	},
 	distDir: 'build',
 	publicRuntimeConfig: {
