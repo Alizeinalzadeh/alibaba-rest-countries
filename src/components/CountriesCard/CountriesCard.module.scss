@@ -19,9 +19,9 @@
 }
 
 .content-details-title {
-	@apply font-bold text-base text-light-text dark:text-dark-text;
+	@apply font-bold text-sm text-light-text dark:text-dark-text;
 }
 
 .content-details-value {
-	@apply text-base text-light-text dark:text-dark-text;
+	@apply text-sm text-light-text dark:text-dark-text;
 }
