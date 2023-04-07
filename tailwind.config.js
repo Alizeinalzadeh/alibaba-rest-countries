@@ -25,7 +25,7 @@ module.exports = {
 			boxShadow: {
 				'sm-light': '0px 4px 10px rgba(0, 0, 0, 0.1)',
 				'md-light': '0px 4px 10px rgba(0, 0, 0, 0.2)',
-				'lg-light': '0px 20px 25px 0 rgb(0 0 0)',
+				'lg-light': '0px 4px 10px rgba(0, 0, 0, 0.3)',
 			},
 		},
 	},
