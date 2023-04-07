@@ -1,0 +1,7 @@
+.container {
+	@apply shadow-md dark:shadow-dark-background p-4 flex justify-between items-center bg-light-background dark:bg-dark-background;
+}
+
+.title {
+	@apply text-lg font-bold text-light-text dark:text-dark-text;
+}
