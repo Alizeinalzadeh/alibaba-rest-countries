@@ -8,8 +8,23 @@ import { ICountriesCard } from './ICountriesCard';
 
 const CountriesCard: React.FC<ICountriesCard> = (props) => {
 	const { country } = props;
+	const mainDetails = [
+		{
+			title: 'Population:',
+			value: country.population.toLocaleString(),
+		},
+		{
+			title: 'Region:',
+			value: country.region,
+		},
+
+		{
+			title: 'Capital:',
+			value: country.capital,
+		},
+	];
 	return (
-		<Link href={`/countries/${country.name.official}`}>
+		<Link href={`/countries/${country.cca3}`}>
 			<div className={classes.container}>
 				<Image
 					src={country.flags.png}
@@ -23,18 +38,18 @@ const CountriesCard: React.FC<ICountriesCard> = (props) => {
 
 				<div className={classes.content}>
 					<h2 className={classes['content-title']}>{country.name.official}</h2>
-					<dl className={classes['content-details']}>
-						<dt className={classes['content-details-title']}>Population:</dt>
-						<dd className={classes['content-details-value']}>{country.population}</dd>
-					</dl>
-					<dl className={classes['content-details']}>
-						<dt className={classes['content-details-title']}>Region:</dt>
-						<dd className={classes['content-details-value']}>{country.region}</dd>
-					</dl>
-					<dl className={classes['content-details']}>
-						<dt className={classes['content-details-title']}>Capital:</dt>
-						<dd className={classes['content-details-value']}>{country.capital}</dd>
-					</dl>
+					{mainDetails.map((item, index) => {
+						return (
+							<dl
+								key={index}
+								className={classes['content-details']}>
+								<dt className={classes['content-details-title']}>{item.title}</dt>
+								<dd className={classes['content-details-value']}>
+									{`${item.value}`}
+								</dd>
+							</dl>
+						);
+					})}
 				</div>
 			</div>
 		</Link>
