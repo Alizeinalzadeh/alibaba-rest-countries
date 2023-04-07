@@ -32,6 +32,7 @@ export interface ICountries {
 	startOfWeek: string;
 	capitalInfo: CapitalInfo;
 	postalCode: PostalCode;
+	borders: string[];
 }
 
 interface PostalCode {
@@ -65,45 +66,15 @@ interface Maps {
 }
 
 interface Demonyms {
-	eng: Eng2;
-	fra: Eng2;
-}
-
-interface Eng2 {
-	f: string;
-	m: string;
+	[key: string]: { [key: string]: string };
 }
 
 interface Translations {
-	ara: Eng;
-	bre: Eng;
-	ces: Eng;
-	cym: Eng;
-	deu: Eng;
-	est: Eng;
-	fin: Eng;
-	fra: Eng;
-	hrv: Eng;
-	hun: Eng;
-	ita: Eng;
-	jpn: Eng;
-	kor: Eng;
-	nld: Eng;
-	per: Eng;
-	pol: Eng;
-	por: Eng;
-	rus: Eng;
-	slk: Eng;
-	spa: Eng;
-	srp: Eng;
-	swe: Eng;
-	tur: Eng;
-	urd: Eng;
-	zho: Eng;
+	[key: string]: { official: string; common: string };
 }
 
 interface Languages {
-	eng: string;
+	[key: string]: string;
 }
 
 interface Idd {
@@ -112,12 +83,10 @@ interface Idd {
 }
 
 interface Currencies {
-	BBD: BBD;
-}
-
-interface BBD {
-	name: string;
-	symbol: string;
+	[key: string]: {
+		name: string;
+		symbol: string;
+	};
 }
 
 interface Name {
@@ -127,10 +96,8 @@ interface Name {
 }
 
 interface NativeName {
-	eng: Eng;
-}
-
-interface Eng {
-	official: string;
-	common: string;
+	[key: string]: {
+		official: string;
+		common: string;
+	};
 }
