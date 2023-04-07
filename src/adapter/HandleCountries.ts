@@ -13,6 +13,12 @@ export class HandleCountries extends BaseAxiosService {
 		});
 	};
 
+	searchByRegion = (region: string, controller?: AbortSignal) => {
+		return this._get(`region/${region}?fields=name,flags,population,region,capital`, {
+			signal: controller,
+		});
+	};
+
 	readCountry = (code: string, controller?: AbortSignal) => {
 		return this._get(
 			`alpha/${code}?fields=name,flags,population,region,subregion,capital,tld,currencies,languages,borders`,
