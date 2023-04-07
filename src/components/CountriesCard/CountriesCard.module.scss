@@ -1,0 +1,27 @@
+.container {
+	@apply w-full rounded-md bg-light-background dark:bg-dark-primary shadow-sm shadow-light-input dark:shadow-dark-primary flex justify-start items-start flex-col;
+}
+
+.flag {
+	@apply rounded-[6px_6px_0_0];
+}
+
+.content {
+	@apply flex justify-start items-start py-4 px-3 pb-6 flex-col;
+}
+
+.content-title {
+	@apply font-extrabold mb-2 text-xl text-light-text dark:text-dark-text;
+}
+
+.content-details {
+	@apply flex gap-2 items-start justify-start;
+}
+
+.content-details-title {
+	@apply font-bold text-base text-light-text dark:text-dark-text;
+}
+
+.content-details-value {
+	@apply text-base text-light-text dark:text-dark-text;
+}
