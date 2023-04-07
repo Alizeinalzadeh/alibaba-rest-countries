@@ -3,9 +3,9 @@
 }
 
 .input {
-	@apply bg-light-background dark:bg-dark-primary rounded-md border border-transparent shadow-md shadow-light-input dark:shadow-dark-primary text-sm text-light-input dark:text-dark-text transition-all px-4 caret-light-input pl-12;
+	@apply bg-light-background dark:bg-dark-primary rounded-md border border-transparent shadow-sm-light text-sm text-light-input dark:text-dark-text transition-all px-4 caret-light-input pl-12;
 	@apply placeholder:text-light-input dark:placeholder:text-dark-text placeholder:opacity-50;
-	@apply focus:outline-none focus:shadow-sm focus:shadow-light-input;
+	@apply focus:outline-none focus:shadow-md-light;
 	@apply disabled:opacity-50;
 }
 
