@@ -2,11 +2,17 @@ import { useEffect, useState } from 'react';
 
 import Header from '@/components/HOC/Header/Header';
 
-const Layout = () => {
+import { ILayout } from './ILayout';
+import classes from './Layout.module.scss';
+
+const Layout: React.FC<ILayout> = (props) => {
 	const [theme, setTheme] = useState('light');
 
 	useEffect(() => {
-		setTheme(localStorage.getItem('theme') || 'light');
+		const THEME: 'light' | 'dark' =
+			(localStorage.getItem('theme') as 'light' | 'dark') || 'light';
+		setTheme(THEME);
+		handleThemeChanged(THEME);
 	}, [theme]);
 
 	const handleThemeChanged = (theme: 'light' | 'dark') => {
@@ -20,10 +26,13 @@ const Layout = () => {
 	};
 
 	return (
-		<Header
-			theme={theme}
-			onThemeChanged={handleThemeChanged}
-		/>
+		<>
+			<Header
+				theme={theme}
+				onThemeChanged={handleThemeChanged}
+			/>
+			<div className={classes['layout-container']}>{props.children}</div>
+		</>
 	);
 };
 
