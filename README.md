@@ -45,7 +45,7 @@ All about components. Also there is a `ui` folder which includes all of project 
 If you need specific component which is just using in a page, you can find it in `pages` folder. <br>
 
 **Environments folder** <br>
-Project env files. The main file is `environmnet.ts` file. other 3 files are sample for other envs which you can use to test your code. <br>
+Project env files. The main file is `environmnet.ts` file which includes translated values of main env files<br>
 
 **Hooks folder** <br>
 Well, there are some hook here.
