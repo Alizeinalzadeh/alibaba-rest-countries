@@ -37,7 +37,7 @@ const CountriesCard: React.FC<ICountriesCard> = (props) => {
 				/>
 
 				<div className={classes.content}>
-					<h2 className={classes['content-title']}>{country.name.official}</h2>
+					<h2 className={classes['content-title']}>{country.name.common}</h2>
 					{mainDetails.map((item, index) => {
 						return (
 							<dl

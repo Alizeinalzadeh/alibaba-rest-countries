@@ -3,7 +3,7 @@
 }
 
 .flag {
-	@apply rounded-[6px_6px_0_0];
+	@apply rounded-[6px_6px_0_0] md:h-[220px] md:w-full;
 }
 
 .content {
