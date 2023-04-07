@@ -72,6 +72,8 @@ Finally, start the production server:
 yarn start
 ```
 
+visit http://localhost:3000 :)
+
 ## Frontend Technologies
 
 <div style='display:flex; justify-content:flex-start; gap: "16px"'>
