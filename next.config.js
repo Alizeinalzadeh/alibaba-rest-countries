@@ -13,8 +13,8 @@ const nextConfig = {
 		dirs: ['pages', 'utils', 'components'],
 	},
 	i18n: {
-		locales: ['fa'],
-		defaultLocale: 'fa',
+		locales: ['en'],
+		defaultLocale: 'en',
 	},
 	images: {
 		formats: ['image/avif', 'image/webp'],
