@@ -1,38 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
-First, run the development server:
+First, Install packages:
 
 ```bash
-npm run dev
-# or
+yarn
+```
+
+Then, run the development server:
+
+```bash
 yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+**Note**
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+-   Don't use npm for running project
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+**Adapter folder** <br>
+All api requests are here, you can extends `BaseAxiosService` class for creating new api requests.<br>
 
-## Learn More
+**Components folder** <br>
+All about components. Also there is a `ui` folder which includes all of project ui components such as _buttons_, _inputs_ and ...<br>
+If you need specific component which is just using in a page, you can find it in `pages` folder. <br>
 
-To learn more about Next.js, take a look at the following resources:
+**Environments folder** <br>
+Project env files. The main file is `environmnet.ts` file. other 3 files are sample for other envs which you can use to test your code. <br>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Hooks folder** <br>
+Well, there are some hook here.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+**Interfaces folder** <br>
+Some core interfaces which are general in all pages. note that components interfaces are located in their own folders. <br>
 
-## Deploy on Vercel
+**Pages folder** <br>
+All needed informations are available in [nextjs](https://nextjs.org/docs/basic-features/pages) documantion.<br>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Public folder** <br>
+All static files, including static images, logo, icons, fonts and ... should place here. <br>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Store folder** <br>
+State manager... we use react useContext hook for this. <br>
+
+**Styles folder** <br>
+All global styles should be here. Typography styles and scss variables are defined in this folder. Also there is a `global.css` file which we use to quick override of some general classes of react libraries.<br>
+
+**Types folder** <br>
+Although we use typescript for the project some of installed libraries doesn't have any types definition, so we create types for them. <br>
+Also you can use this command to solve this problem in more dynamic and standard approach: `yarn add @types/[library_name]`<br>
+
+**Utils folder** <br>
+There are many javascript utils which are used in many files of our project. You can find all of them here.
+
+## Frontend Technologies
+
+<div style='display:flex; justify-content:flex-start; gap: "16px"'>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" height="50px" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png"  height="50px" />
+<img src="https://www.freecodecamp.org/news/content/images/2021/06/Ekran-Resmi-2019-11-18-18.08.13.png"  height="50px" />
+<img src="https://images.ctfassets.net/23aumh6u8s0i/c04wENP3FnbevwdWzrePs/1e2739fa6d0aa5192cf89599e009da4e/nextjs"  height="50px" />
+<img src="https://sass-lang.com/assets/img/styleguide/seal-color-reversed-c50d9b78.png"  height="50px" />
+<img src="https://static.axios.com/img/axios-site/axios-placeholder-1x1.png"  height="50px" />
+<img src="https://tailwindcss.com/_next/static/media/social-square.b622e290e82093c36cca57092ffe494f.jpg" height="50px" />
+<img src="https://swapps.com/wp-content/uploads/2018/03/webpack.jpg" height="50px" />
+
+</div>
