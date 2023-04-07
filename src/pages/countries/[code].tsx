@@ -87,70 +87,76 @@ const Country: NextPage<IDetailsPage> = (props) => {
 						router.back();
 					}}
 				/>
-				<div className='relative'>
-					<Image
-						src={country.flags.png}
-						alt={country.flags.alt}
-						className='my-16'
-						width={420}
-						height={324}
-						placeholder='blur'
-						blurDataURL={Preloader}
-					/>
-				</div>
-				<h1 className='font-extrabold mb-4 text-xl text-light-text dark:text-dark-text'>
-					{country.name.official}
-				</h1>
-				<div className='flex flex-col gap-2 mb-8'>
-					{mainDetails.map((item, index) => {
-						return (
-							<dl
-								key={index}
-								className='flex gap-2 items-start justify-start'>
-								<dt className='font-semibold text-base text-light-text dark:text-dark-text whitespace-nowrap'>
-									{item.title}
-								</dt>
-								<dd className='text-base text-light-text dark:text-dark-text'>
-									{`${item.value}`}
-								</dd>
-							</dl>
-						);
-					})}
-				</div>
-				<div className='flex flex-col gap-2 mb-8'>
-					{languageDetails.map((item, index) => {
-						return (
-							<dl
-								key={index}
-								className='flex gap-2 items-start justify-start'>
-								<dt className='font-semibold text-base text-light-text dark:text-dark-text'>
-									{item.title}
-								</dt>
-								<dd className='text-base text-light-text dark:text-dark-text'>
-									{`${item.value}`}
-								</dd>
-							</dl>
-						);
-					})}
-				</div>
-				{country.borders.length > 0 && (
-					<div className='mb-8'>
-						<p className='font-semibold text-lg text-light-text dark:text-dark-text mb-2'>
-							Border Countries:
-						</p>
-						<div className='flex justify-start items-center gap-4 flex-wrap mb-8'>
-							{borderCountries.map((country) => {
-								return (
-									<Link
-										href={`/countries/${country.cca3}`}
-										key={country.cca3}>
-										<Button label={country.name.official} />
-									</Link>
-								);
-							})}
-						</div>
+				<div className='flex flex-col md:flex-row md:gap-8 md:justify-between md:items-start md:mt-24'>
+					<div className='relative md:w-1/2'>
+						<Image
+							src={country.flags.png}
+							alt={country.flags.alt}
+							className='my-16 md:my-0'
+							width={420}
+							height={324}
+							placeholder='blur'
+							blurDataURL={Preloader}
+						/>
 					</div>
-				)}
+					<div className='md:w-1/2'>
+						<h1 className='font-extrabold mb-4 text-xl text-light-text dark:text-dark-text'>
+							{country.name.official}
+						</h1>
+						<div className='flex flex-col gap-8 md:flex-row'>
+							<div className='flex flex-col gap-2 justify-start w-full'>
+								{mainDetails.map((item, index) => {
+									return (
+										<dl
+											key={index}
+											className='flex gap-2 items-start justify-start'>
+											<dt className='font-semibold text-base text-light-text dark:text-dark-text whitespace-nowrap'>
+												{item.title}
+											</dt>
+											<dd className='text-base text-light-text dark:text-dark-text  whitespace-nowrap'>
+												{`${item.value}`}
+											</dd>
+										</dl>
+									);
+								})}
+							</div>
+							<div className='flex flex-col gap-2 mb-8'>
+								{languageDetails.map((item, index) => {
+									return (
+										<dl
+											key={index}
+											className='flex gap-2 items-start justify-start'>
+											<dt className='font-semibold text-base text-light-text dark:text-dark-text whitespace-nowrap'>
+												{item.title}
+											</dt>
+											<dd className='text-base text-light-text dark:text-dark-text  whitespace-nowrap'>
+												{`${item.value}`}
+											</dd>
+										</dl>
+									);
+								})}
+							</div>
+						</div>
+						{country.borders.length > 0 && (
+							<div className='md:my-8 mb-8'>
+								<p className='font-semibold text-lg text-light-text dark:text-dark-text mb-2'>
+									Border Countries:
+								</p>
+								<div className='flex justify-start items-center gap-4 flex-wrap mb-8'>
+									{borderCountries.map((country) => {
+										return (
+											<Link
+												href={`/countries/${country.cca3}`}
+												key={country.cca3}>
+												<Button label={country.name.official} />
+											</Link>
+										);
+									})}
+								</div>
+							</div>
+						)}
+					</div>
+				</div>
 			</Container>
 		</Layout>
 	);

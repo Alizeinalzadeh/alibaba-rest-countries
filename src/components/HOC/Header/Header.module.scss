@@ -1,5 +1,9 @@
+.header {
+	@apply shadow-lg-light bg-white dark:bg-dark-primary;
+}
+
 .container {
-	@apply shadow-lg-light  p-4 flex justify-between items-center bg-white dark:bg-dark-primary;
+	@apply flex justify-between items-center;
 }
 
 .title {

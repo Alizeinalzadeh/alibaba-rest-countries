@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 
 import { HandleCountries } from '@/adapter/HandleCountries';
 import CountriesCard from '@/components/CountriesCard/CountriesCard';
+import Container from '@/components/HOC/Container/Container';
 import Layout from '@/components/HOC/Layout/Layout';
 import Search from '@/components/Search/Search';
 import { IHomePage } from '@/interface/pages/IHomePage';
@@ -41,10 +42,10 @@ const Home: NextPage<IHomePage> = (props) => {
 
 	return (
 		<Layout>
-			<div className='p-4 pb-0 pt-6'>
+			<Container>
 				<Search onSearch={handleOnSearch} />
-			</div>
-			<div className='flex flex-col p-12 gap-8'>
+			</Container>
+			<div className='grid grid-cols-1 p-12 gap-8 md:grid-cols-4'>
 				{countries.length > 0 ? (
 					<>
 						{countries.map((country) => {
