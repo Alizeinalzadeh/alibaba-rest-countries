@@ -21,7 +21,7 @@ const nextConfig = {
 		minimumCacheTTL: 60,
 		domains: ['flagcdn.com', 'upload.wikimedia.org'],
 	},
-	distDir: 'build',
+
 	publicRuntimeConfig: {
 		version,
 	},
