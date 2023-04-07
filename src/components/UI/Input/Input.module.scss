@@ -1,0 +1,37 @@
+.parent {
+	@apply relative flex flex-col w-fit gap-2 transition-all;
+}
+
+.input {
+	@apply bg-light-background dark:bg-dark-primary rounded-md border border-transparent shadow-md shadow-light-input dark:shadow-dark-primary text-sm text-light-input dark:text-dark-text transition-all px-4 caret-light-input pl-12;
+	@apply placeholder:text-light-input dark:placeholder:text-dark-text placeholder:opacity-50;
+	@apply focus:outline-none focus:shadow-sm focus:shadow-light-input;
+	@apply disabled:opacity-50;
+}
+
+.label {
+	@apply text-base text-light-text font-light transition-all;
+}
+
+.helper {
+	@apply absolute bottom-3 left-3 opacity-30 dark:mix-blend-darken;
+}
+
+.rounded {
+	@apply rounded-[200px];
+}
+
+.fluid {
+	@apply w-full;
+}
+
+.small {
+	@apply h-[32px];
+}
+.medium {
+	@apply h-[44px];
+}
+
+.large {
+	@apply h-[52px];
+}
