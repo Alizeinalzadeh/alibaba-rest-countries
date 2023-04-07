@@ -8,13 +8,13 @@ export class HandleCountries extends BaseAxiosService {
 	};
 
 	searchCountries = (query: string, controller?: AbortSignal) => {
-		return this._get(`name/${query}?fields=name,flags,population,region,capital`, {
+		return this._get(`name/${query}?fields=name,flags,population,region,capital,cca3`, {
 			signal: controller,
 		});
 	};
 
 	searchByRegion = (region: string, controller?: AbortSignal) => {
-		return this._get(`region/${region}?fields=name,flags,population,region,capital`, {
+		return this._get(`region/${region}?fields=name,flags,population,region,capital,cca3`, {
 			signal: controller,
 		});
 	};
