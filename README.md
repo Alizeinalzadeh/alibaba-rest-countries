@@ -1,4 +1,17 @@
-## Getting Started
+## Getting Started Using Docker
+
+run below commands and enjoy:
+
+```bash
+sudo docker build -t alibaba-rest-countries .
+```
+
+```bash
+docker run --publish 3000:3000 alibaba-rest-countries
+```
+
+
+## Getting Started Locally
 
 First, Install packages:
 
