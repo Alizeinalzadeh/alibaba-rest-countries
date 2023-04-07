@@ -1,12 +1,12 @@
 .button {
-	@apply rounded-sm select-none transition-all flex justify-center items-center gap-2 w-fit whitespace-nowrap text-sm font-light p-4;
+	@apply rounded-md select-none transition-all flex justify-center items-center gap-2 w-fit whitespace-nowrap text-sm font-light p-4;
 	@apply disabled:pointer-events-none disabled:select-none;
 }
 
 .filled-primary {
-	@apply bg-light-background dark:bg-dark-background shadow-lg shadow-light-input dark:shadow-dark-primary text-light-text dark:text-dark-text border border-transparent;
+	@apply bg-light-background dark:bg-dark-background shadow-md-light text-light-text dark:text-dark-text border border-transparent;
 	&:hover {
-		@apply shadow-xl;
+		@apply shadow-lg-light;
 	}
 }
 
