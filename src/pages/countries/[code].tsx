@@ -71,10 +71,6 @@ const Country: NextPage<IDetailsPage> = (props) => {
 				});
 			});
 		}
-
-		return () => {
-			CONTROLLER.abort();
-		};
 	}, [router.query]);
 
 	return (
@@ -129,7 +125,7 @@ const Country: NextPage<IDetailsPage> = (props) => {
 											<dt className='font-semibold text-base text-light-text dark:text-dark-text whitespace-nowrap'>
 												{item.title}
 											</dt>
-											<dd className='text-base text-light-text dark:text-dark-text  whitespace-nowrap'>
+											<dd className='text-base text-light-text dark:text-dark-text'>
 												{`${item.value}`}
 											</dd>
 										</dl>
