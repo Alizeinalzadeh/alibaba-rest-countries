@@ -42,9 +42,6 @@ All needed informations are available in [nextjs](https://nextjs.org/docs/basic-
 **Public folder** <br>
 All static files, including static images, logo, icons, fonts and ... should place here. <br>
 
-**Store folder** <br>
-State manager... we use react useContext hook for this. <br>
-
 **Styles folder** <br>
 All global styles should be here. Typography styles and scss variables are defined in this folder. Also there is a `global.css` file which we use to quick override of some general classes of react libraries.<br>
 
@@ -54,6 +51,26 @@ Also you can use this command to solve this problem in more dynamic and standard
 
 **Utils folder** <br>
 There are many javascript utils which are used in many files of our project. You can find all of them here.
+
+## Production Build
+
+First, Install packages:
+
+```bash
+yarn
+```
+
+Then, run the build command:
+
+```bash
+yarn build
+```
+
+Finally, start the production server:
+
+```bash
+yarn start
+```
 
 ## Frontend Technologies
 
