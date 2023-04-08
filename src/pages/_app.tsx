@@ -18,9 +18,7 @@ export default function App({ Component, pageProps }: AppProps) {
 					name='viewport'
 					content='width=device-width, initial-scale=1'
 				/>
-				<title>
-					Where in the world
-				</title>
+				<title>Where in the world</title>
 			</Head>
 			<main className={`${nunitoSans.variable} font-nunito`}>
 				<Component {...pageProps} />
