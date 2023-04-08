@@ -14,6 +14,11 @@ sudo docker build -t alibaba-rest-countries .
 docker run --publish 3000:3000 alibaba-rest-countries
 ```
 
+## Runing Tests
+There are unit tests for some of the components.
+```bash
+yarn test
+```
 
 ## Getting Started Locally
 
